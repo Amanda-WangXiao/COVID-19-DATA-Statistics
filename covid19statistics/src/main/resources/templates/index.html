@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+    <h1 align="center">COVID-19 DATA Statistics</h1>
+
+    <table id="main_table" border="1" align="center">
+        <tr>
+            <th>Country/Region</th>
+            <th>Province/State</th>
+            <th>TotalCases</th>
+            <th>NewCases</th>
+        </tr>
+        <tr th:each="a:${all_info}">
+            <td th:text="${a.country_Region}"></td>
+            <td th:text="${a.province_State}"></td>
+            <td th:text="${a.latestCases}"></td>
+            <td th:text="${a.newCases}"></td>
+        </tr>
+    </table>
+
+</body>
+</html>
